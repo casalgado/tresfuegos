@@ -30,13 +30,13 @@ export default {
 @media only screen and (min-width: 768px) {
   /* For desktop: */
   #ham-cont {
-    width: 1410px;
+    width: 100%;
     margin: 0 auto;
   }
 
   .ham {
-    margin: 30px;
-    width: 407px;
+    margin: 21px;
+    width: 30%;
   }
   #ham-button {
     display: none;

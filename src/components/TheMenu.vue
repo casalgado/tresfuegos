@@ -19,7 +19,8 @@ img {
 @media only screen and (min-width: 768px) {
   /* For desktop: */
   img {
-    width: 705px;
+    width: 48%;
+    margin: 20px 10px 5px 10px;
   }
 }
 </style>

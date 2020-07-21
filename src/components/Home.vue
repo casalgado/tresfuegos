@@ -53,22 +53,29 @@ export default {
 @media only screen and (min-width: 768px) {
   /* For desktop: */
   #caret {
+    display: block;
     fill: rgb(196, 167, 141);
     position: absolute;
     top: 90%;
-    left: 47.3%;
+    left: 46.5%;
   }
 
   #main-image-cont {
-    width: 1410px;
+    width: 100%;
     position: relative;
     margin: 0 auto;
   }
 
+  #main-image-cont img {
+    width: 100%;
+    left: 0%;
+  }
+
   #main-button {
+    width: 180px;
     position: absolute;
     top: 65%;
-    left: 44%;
+    left: 43%;
   }
 }
 </style>
