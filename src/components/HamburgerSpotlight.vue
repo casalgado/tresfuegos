@@ -1,0 +1,45 @@
+<template>
+  <div id="ham-cont">
+    <img class="ham" alt="Hamburgers" src="../assets/ham1.jpg" />
+    <img class="ham" alt="Hamburgers" src="../assets/ham0.jpg" />
+    <ButtonWhatsapp id="ham-button" msg="HACER PEDIDO" />
+    <img class="ham" alt="Hamburgers" src="../assets/ham2.jpg" />
+    <img class="ham" alt="Hamburgers" src="../assets/ham3.jpg" />
+    <img class="ham" alt="Hamburgers" src="../assets/ham4.jpg" />
+    <img class="ham" alt="Hamburgers" src="../assets/ham5.jpg" />
+  </div>
+</template>
+
+<script>
+import ButtonWhatsapp from "./ButtonWhatsapp";
+export default {
+  name: "HamburgerSpotlight",
+  components: { ButtonWhatsapp },
+};
+</script>
+
+<style scoped>
+.ham {
+  width: 100%;
+}
+#ham-button {
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  #ham-cont {
+    width: 1410px;
+    margin: 0 auto;
+  }
+
+  .ham {
+    margin: 30px;
+    width: 407px;
+  }
+  #ham-button {
+    display: none;
+  }
+}
+</style>

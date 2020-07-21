@@ -1,28 +1,34 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <router-view />
   </div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
-</script>
-
 <style>
+@import url(//db.onlinewebfonts.com/c/8d8f2ae3f36a79b31483ea6ff88eda3f?family=CiutadellaRoundedW01-Rg);
+
+@font-face {
+  font-family: "CiutadellaRoundedW01-Rg";
+  src: url("//db.onlinewebfonts.com/t/8d8f2ae3f36a79b31483ea6ff88eda3f.eot");
+  src: url("//db.onlinewebfonts.com/t/8d8f2ae3f36a79b31483ea6ff88eda3f.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/8d8f2ae3f36a79b31483ea6ff88eda3f.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/8d8f2ae3f36a79b31483ea6ff88eda3f.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/8d8f2ae3f36a79b31483ea6ff88eda3f.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/8d8f2ae3f36a79b31483ea6ff88eda3f.svg#CiutadellaRoundedW01-Rg")
+      format("svg");
+}
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: CiutadellaRoundedW01-Rg;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+}
+
+body {
+  background-color: black;
 }
 </style>
