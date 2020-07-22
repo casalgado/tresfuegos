@@ -5,7 +5,7 @@
       <ButtonWhatsapp id="main-button" msg="HACER PEDIDO" />
       <CaretBottom id="caret" />
     </div>
-    <TheMenu />
+    <HomeMenu />
     <HamburgerSpotlight />
     <TheFooter />
   </div>
@@ -15,13 +15,13 @@
 import HamburgerSpotlight from "./HamburgerSpotlight";
 import ButtonWhatsapp from "./ButtonWhatsapp";
 import CaretBottom from "./CaretBottom";
-import TheMenu from "./TheMenu";
+import HomeMenu from "./HomeMenu";
 import TheFooter from "./TheFooter";
 export default {
   name: "Home",
   components: {
     ButtonWhatsapp,
-    TheMenu,
+    HomeMenu,
     CaretBottom,
     HamburgerSpotlight,
     TheFooter,

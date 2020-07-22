@@ -16,7 +16,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 button {
   font-family: CiutadellaRoundedW01-Rg;
   cursor: pointer;

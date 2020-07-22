@@ -1,26 +1,37 @@
 <template>
-  <div>
-    <img alt="Menu1" src="../assets/menu1.jpg" />
-    <img alt="menu2" src="../assets/menu2.jpg" />
+  <div id="menu">
+    <TheMenuHeader />
+    <TheMenuItem v-for="i in menu" :key="i.nombre" :itemData="i" />
   </div>
 </template>
 
 <script>
+import TheMenuHeader from "./TheMenuHeader";
+import TheMenuItem from "./TheMenuItem";
+import { menu } from "../lib/menu";
 export default {
   name: "TheMenu",
+  components: { TheMenuItem, TheMenuHeader },
+  data() {
+    return {
+      menu: menu,
+    };
+  },
 };
 </script>
 
 <style scoped>
-img {
-  width: 100%;
+#menu {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px 15px;
+  margin: 10px 30px 10px 30px;
 }
 
 @media only screen and (min-width: 768px) {
   /* For desktop: */
-  img {
-    width: 48%;
-    margin: 20px 10px 5px 10px;
+  #menu {
+    grid-template-columns: 1fr 1fr;
   }
 }
 </style>
