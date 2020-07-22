@@ -55,9 +55,17 @@ export default {
 }
 
 .menu-item img {
-  height: 180px;
-  width: 180px;
+  height: 80px;
+  width: 80px;
   border-radius: 5px;
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .menu-item img {
+    height: 180px;
+    width: 180px;
+  }
 }
 
 .item-details {
@@ -67,6 +75,7 @@ export default {
 }
 
 .item-details h2 {
+  margin-top: 0px;
   text-transform: capitalize;
 }
 
@@ -75,6 +84,7 @@ export default {
 }
 
 .price {
+  margin-bottom: 0px;
   margin-left: 20px;
   text-align: right;
   display: inline-block;

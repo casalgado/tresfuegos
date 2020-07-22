@@ -25,13 +25,14 @@ export default {
   display: grid;
   grid-template-columns: 1fr;
   gap: 15px 15px;
-  margin: 10px 30px 10px 30px;
+  margin: 0px;
 }
 
 @media only screen and (min-width: 768px) {
   /* For desktop: */
   #menu {
     grid-template-columns: 1fr 1fr;
+    margin: 10px 30px 10px 30px;
   }
 }
 </style>
