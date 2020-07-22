@@ -46,7 +46,7 @@ export default {
 <style scoped>
 .menu-item {
   display: grid;
-  grid-template-columns: 2fr 5fr;
+  grid-template-columns: 1fr;
   padding: 15px;
   background-color: whitesmoke;
   border: 1px solid gray;
@@ -55,16 +55,21 @@ export default {
 }
 
 .menu-item img {
-  height: 80px;
-  width: 80px;
+  width: 100%;
+  margin: 0 auto;
   border-radius: 5px;
+  margin-bottom: 20px;
 }
 
 @media only screen and (min-width: 768px) {
   /* For desktop: */
+  .menu-item {
+    grid-template-columns: 2fr 5fr;
+  }
   .menu-item img {
     height: 180px;
     width: 180px;
+    border-radius: 5px;
   }
 }
 

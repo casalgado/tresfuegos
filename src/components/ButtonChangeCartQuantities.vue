@@ -58,6 +58,7 @@ p {
   border-bottom: 1px solid rgb(226, 126, 38);
   padding-top: 2px;
   padding-bottom: 4px;
+  margin-bottom: 0px;
 }
 
 #remove {
