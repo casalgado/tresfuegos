@@ -38,10 +38,13 @@ export default {
 }
 
 img {
-  width: 80px;
+  width: 40px;
 }
 
 @media only screen and (min-width: 768px) {
   /* For desktop: */
+  img {
+    width: 80px;
+  }
 }
 </style>
