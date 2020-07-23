@@ -2,7 +2,7 @@
   <div id="ham-cont">
     <img class="ham" alt="Hamburgers" src="../assets/ham1.jpg" />
     <img class="ham" alt="Hamburgers" src="../assets/ham0.jpg" />
-    <ButtonWhatsapp id="ham-button" msg="HACER PEDIDO" />
+    <ButtonNavigation id="ham-button" text="VER MENU" route="Menu" />
     <img class="ham" alt="Hamburgers" src="../assets/ham2.jpg" />
     <img class="ham" alt="Hamburgers" src="../assets/ham3.jpg" />
     <img class="ham" alt="Hamburgers" src="../assets/ham4.jpg" />
@@ -11,10 +11,10 @@
 </template>
 
 <script>
-import ButtonWhatsapp from "./ButtonWhatsapp";
+import ButtonNavigation from "./ButtonNavigation";
 export default {
   name: "HamburgerSpotlight",
-  components: { ButtonWhatsapp },
+  components: { ButtonNavigation },
 };
 </script>
 

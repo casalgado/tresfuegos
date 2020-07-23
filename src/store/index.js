@@ -7,7 +7,18 @@ export default new Vuex.Store({
   state: {
     cart: [],
   },
-  getters: {},
+  getters: {
+    totalQuantity: (state) => {
+      return state.cart.reduce((totalq, currentItem) => {
+        return totalq + currentItem.quantity;
+      }, 0);
+    },
+    totalPrice: (state) => {
+      return state.cart.reduce((totalp, currentItem) => {
+        return totalp + currentItem.quantity * currentItem.price;
+      }, 0);
+    },
+  },
   mutations: {
     addFirst(state, payload) {
       state.cart.push(Object.assign({}, payload));

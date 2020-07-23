@@ -2,7 +2,7 @@
   <div class="home">
     <div id="main-image-cont">
       <img alt="Tres Fuegos Branding" src="../assets/branding.jpg" />
-      <ButtonWhatsapp id="main-button" msg="HACER PEDIDO" />
+      <ButtonNavigation id="main-button" text="VER MENU" route="Menu" />
       <CaretBottom id="caret" />
     </div>
     <HomeMenu />
@@ -13,14 +13,14 @@
 
 <script>
 import HamburgerSpotlight from "./HamburgerSpotlight";
-import ButtonWhatsapp from "./ButtonWhatsapp";
+import ButtonNavigation from "./ButtonNavigation";
 import CaretBottom from "./CaretBottom";
 import HomeMenu from "./HomeMenu";
 import TheFooter from "./TheFooter";
 export default {
   name: "Home",
   components: {
-    ButtonWhatsapp,
+    ButtonNavigation,
     HomeMenu,
     CaretBottom,
     HamburgerSpotlight,

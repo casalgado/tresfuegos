@@ -1,17 +1,15 @@
 <template>
-  <div id="menu">
-    <TheMenuHeader />
+  <div class="menu">
     <TheMenuItem v-for="i in menu" :key="i.nombre" :itemData="i" />
   </div>
 </template>
 
 <script>
-import TheMenuHeader from "./TheMenuHeader";
 import TheMenuItem from "./TheMenuItem";
 import { menu } from "../lib/menu";
 export default {
   name: "TheMenu",
-  components: { TheMenuItem, TheMenuHeader },
+  components: { TheMenuItem },
   data() {
     return {
       menu: menu,
@@ -21,7 +19,7 @@ export default {
 </script>
 
 <style scoped>
-#menu {
+.menu {
   display: grid;
   grid-template-columns: 1fr;
   gap: 15px 15px;
@@ -30,7 +28,7 @@ export default {
 
 @media only screen and (min-width: 768px) {
   /* For desktop: */
-  #menu {
+  .menu {
     grid-template-columns: 1fr 1fr;
     margin: 10px 30px 10px 30px;
   }

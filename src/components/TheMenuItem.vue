@@ -56,9 +56,10 @@ export default {
 
 .menu-item img {
   width: 100%;
+  max-width: 300px;
   margin: 0 auto;
   border-radius: 5px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -70,6 +71,7 @@ export default {
     height: 180px;
     width: 180px;
     border-radius: 5px;
+    margin-bottom: 0px;
   }
 }
 

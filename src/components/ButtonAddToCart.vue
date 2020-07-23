@@ -16,6 +16,7 @@ export default {
         name: this.itemData.nombre,
         quantity: 1,
         price: this.itemData.precio,
+        image: this.itemData.imagen,
       });
     },
   },

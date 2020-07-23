@@ -1,8 +1,17 @@
 <template>
   <div id="app">
-    <router-view />
+    <TheHeader />
+    <router-view id="view" />
   </div>
 </template>
+<script>
+import TheHeader from "./components/TheHeader";
+export default {
+  components: {
+    TheHeader,
+  },
+};
+</script>
 
 <style>
 @import url(//db.onlinewebfonts.com/c/8d8f2ae3f36a79b31483ea6ff88eda3f?family=CiutadellaRoundedW01-Rg);
@@ -25,13 +34,19 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  max-width: 1280px;
-  margin: 0 auto;
   overflow: hidden;
   color: rgb(196, 167, 141);
 }
 
+#view {
+  max-width: 1280px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0 auto;
+}
+
 body {
-  background-color: rgb(10, 10, 10);
+  margin: 0px;
+  background-color: rgb(15, 15, 15);
 }
 </style>
