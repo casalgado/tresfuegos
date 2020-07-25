@@ -1,24 +1,27 @@
 <template>
   <div class="cont">
     <img :alt="item.nombre" :src="src" />
-    <p class="name">{{ item.name }}</p>
-    <p>{{ item.quantity }} <span class="letter">X</span> ${{ priceFormat }}</p>
+    <p class="name">{{ item.nombre }}</p>
+    <p>{{ item.cantidad }} <span class="letter">X</span> ${{ priceFormat }}</p>
+    <ButtonChangeCartQuantities :itemData="item" />
   </div>
 </template>
 
 <script>
+import ButtonChangeCartQuantities from "./ButtonChangeCartQuantities";
 import numeral from "numeral";
 export default {
   name: "CartSnippet",
+  components: { ButtonChangeCartQuantities },
   props: {
     item: Object,
   },
   computed: {
     src: function() {
-      return require(`../assets/menu/${this.item.image}.jpg`);
+      return require(`../assets/menu/${this.item.imagen}.jpg`);
     },
     priceFormat: function() {
-      return numeral(this.item.price).format("0,0");
+      return numeral(this.item.precio).format("0,0");
     },
   },
 };
@@ -33,7 +36,7 @@ export default {
   padding-right: 10px;
   display: grid;
   grid-template-columns: 2fr 4fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   gap: 0px 15px;
   padding-bottom: 5px;
   border-bottom: 2px solid lightgray;
@@ -51,6 +54,6 @@ p {
 
 img {
   width: 100%;
-  grid-row: span 2;
+  grid-row: span 3;
 }
 </style>

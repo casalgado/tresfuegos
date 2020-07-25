@@ -1,9 +1,9 @@
 <template>
-  <div class="menu-item">
+  <div id="menu-item">
     <img :alt="itemData.nombre" :src="src" />
     <div class="item-details">
       <h2>{{ itemData.nombre }}</h2>
-      <p>{{ itemData.descripcion }}</p>
+      <p>{{ itemData.descripcion || "" }}</p>
       <div class="">
         <ButtonAddToCart v-if="!inCart" :itemData="itemData" />
         <ButtonChangeCartQuantities v-else :itemData="itemData" />
@@ -32,8 +32,8 @@ export default {
       let cart = this.$store.state.cart;
       let inCart = false;
       cart.forEach((e) => {
-        if (e.name === this.itemData.nombre) {
-          console.log(`${e.name}==${this.itemData.nombre}`);
+        if (e.nombre === this.itemData.nombre) {
+          console.log(`${e.nombre}==${this.itemData.nombre}`);
           inCart = true;
         }
       });
@@ -44,7 +44,7 @@ export default {
 </script>
 
 <style scoped>
-.menu-item {
+#menu-item {
   display: grid;
   grid-template-columns: 1fr;
   padding: 15px;
@@ -54,7 +54,7 @@ export default {
   border-radius: 10px;
 }
 
-.menu-item img {
+#menu-item img {
   width: 100%;
   max-width: 300px;
   margin: 0 auto;
@@ -64,10 +64,10 @@ export default {
 
 @media only screen and (min-width: 768px) {
   /* For desktop: */
-  .menu-item {
+  #menu-item {
     grid-template-columns: 2fr 5fr;
   }
-  .menu-item img {
+  #menu-item img {
     height: 180px;
     width: 180px;
     border-radius: 5px;

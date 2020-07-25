@@ -13,10 +13,10 @@ export default {
   methods: {
     add: function() {
       this.$store.commit("addFirst", {
-        name: this.itemData.nombre,
-        quantity: 1,
-        price: this.itemData.precio,
-        image: this.itemData.imagen,
+        nombre: this.itemData.nombre,
+        cantidad: 1,
+        precio: this.itemData.precio,
+        imagen: this.itemData.imagen,
       });
     },
   },

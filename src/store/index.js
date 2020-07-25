@@ -10,12 +10,12 @@ export default new Vuex.Store({
   getters: {
     totalQuantity: (state) => {
       return state.cart.reduce((totalq, currentItem) => {
-        return totalq + currentItem.quantity;
+        return totalq + currentItem.cantidad;
       }, 0);
     },
     totalPrice: (state) => {
       return state.cart.reduce((totalp, currentItem) => {
-        return totalp + currentItem.quantity * currentItem.price;
+        return totalp + currentItem.cantidad * currentItem.precio;
       }, 0);
     },
   },
@@ -26,19 +26,19 @@ export default new Vuex.Store({
     },
     addOne(state, payload) {
       state.cart.forEach((e) => {
-        if (e.name === payload.name) {
-          e.quantity++;
+        if (e.nombre === payload.nombre) {
+          e.cantidad++;
         }
       });
       state.cart = [...state.cart];
     },
     removeOne(state, payload) {
       state.cart.forEach((e) => {
-        if (e.name === payload.name) {
-          e.quantity--;
+        if (e.nombre === payload.nombre) {
+          e.cantidad--;
         }
       });
-      state.cart = [...state.cart.filter((e) => e.quantity > 1)];
+      state.cart = [...state.cart.filter((e) => e.cantidad >= 1)];
     },
   },
   actions: {},

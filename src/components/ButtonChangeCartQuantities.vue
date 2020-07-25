@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div @click.prevent.stop="click()">
     <button id="remove" @click="removeOne">-</button>
-    <p>{{ currentQuantity }}</p>
+    <button id="quantity">{{ currentQuantity }}</button>
     <button id="add" @click="addOne">+</button>
   </div>
 </template>
@@ -15,13 +15,16 @@ export default {
   methods: {
     addOne: function() {
       this.$store.commit("addOne", {
-        name: this.itemData.nombre,
+        nombre: this.itemData.nombre,
       });
     },
     removeOne: function() {
       this.$store.commit("removeOne", {
-        name: this.itemData.nombre,
+        nombre: this.itemData.nombre,
       });
+    },
+    click: function() {
+      console.log("test");
     },
   },
   computed: {
@@ -29,8 +32,8 @@ export default {
       let cart = this.$store.state.cart;
       let q = 0;
       cart.forEach((e) => {
-        if (e.name === this.itemData.nombre) {
-          q = e.quantity;
+        if (e.nombre === this.itemData.nombre) {
+          q = e.cantidad;
         }
       });
       return q;
@@ -50,15 +53,13 @@ export default {
   border-left: none;
 }
 
-p {
-  background-color: rgb(255, 140, 40);
-  width: 20px;
-  text-align: center;
-  border-top: 1px solid rgb(226, 126, 38);
-  border-bottom: 1px solid rgb(226, 126, 38);
-  padding-top: 2px;
-  padding-bottom: 4px;
-  margin-bottom: 0px;
+#quantity {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-right: none;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-left: none;
 }
 
 #remove {
@@ -85,5 +86,9 @@ button:active,
 button:focus {
   -moz-outline-style: none;
   outline: none;
+}
+
+#quantity:hover {
+  background-color: rgb(255, 140, 40);
 }
 </style>

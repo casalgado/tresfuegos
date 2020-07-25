@@ -1,6 +1,6 @@
 <template>
-  <div class="cart-popup">
-    <p>Carrito de Compra</p>
+  <div class="order-summary">
+    <h2>Resumen de Pedido</h2>
     <CartSnippet v-for="c in cart" :key="c.nombre" :item="c" />
     <p class="total">Total: {{ total }}</p>
   </div>
@@ -31,24 +31,8 @@ export default {
 </script>
 
 <style scoped>
-.cart-popup {
-  cursor: auto;
-  width: 320px;
-  position: absolute;
-  top: 90%;
-  right: -25px;
-  background-color: whitesmoke;
-  border: 1px solid rgb(30, 30, 30);
-  border-radius: 8px;
-}
-
-p:first-child {
-  border-bottom: 2px solid lightgray;
-  padding-bottom: 10px;
-  margin-bottom: 5px;
-}
-
-p {
-  font-weight: bold;
+.order-summary {
+  width: 80%;
+  margin: 0 auto;
 }
 </style>
