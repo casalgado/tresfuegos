@@ -36,7 +36,7 @@ export default {
 <style scoped>
 .cart-popup {
   cursor: auto;
-  width: 320px;
+  width: 100vw;
   position: absolute;
   top: 90%;
   right: -25px;
@@ -45,6 +45,22 @@ export default {
   border-radius: 8px;
   z-index: 999;
   padding-bottom: 25px;
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .cart-popup {
+    cursor: auto;
+    width: 320px;
+    position: absolute;
+    top: 90%;
+    right: -25px;
+    background-color: whitesmoke;
+    border: 1px solid rgb(30, 30, 30);
+    border-radius: 8px;
+    z-index: 999;
+    padding-bottom: 25px;
+  }
 }
 
 p:first-child {

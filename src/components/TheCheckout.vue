@@ -26,11 +26,23 @@ export default {
 <style scoped>
 .cont {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
 }
 
 #checkoutButton {
-  grid-column: span 2;
+  grid-column: span 1;
   margin-top: 25px;
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .cont {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  #checkoutButton {
+    grid-column: span 2;
+    margin-top: 25px;
+  }
 }
 </style>

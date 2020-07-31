@@ -36,7 +36,6 @@ export default {
   padding-top: 10px;
   padding-bottom: 10px;
   max-width: 1280px;
-  min-height: 85px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;

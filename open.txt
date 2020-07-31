@@ -1,0 +1,9 @@
+cambios en mobil.
+
+
+centrar el cart popup en la ventana.
+
+
+cambios en general
+
+agregar el footer al checkout

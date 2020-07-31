@@ -1,11 +1,5 @@
 <template>
-  <div
-    class="cart-icon"
-    @mouseenter="hover = true"
-    @mouseleave="hover = false"
-    @mouseover="hover = true"
-    @click="hover = !hover"
-  >
+  <div class="cart-icon" @click="hover = !hover">
     <img alt="" src="../assets/cart-icon.svg" />
     <div v-if="quantity > 0" class="q-indicator">
       <p>{{ quantity }}</p>
@@ -45,7 +39,7 @@ export default {
 .q-indicator {
   position: absolute;
   top: 5px;
-  left: -5px;
+  left: -35px;
   cursor: pointer;
   color: white;
   background-color: black;
@@ -56,6 +50,23 @@ export default {
   border-radius: 15px;
 }
 
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .q-indicator {
+    position: absolute;
+    top: 5px;
+    left: -5px;
+    cursor: pointer;
+    color: white;
+    background-color: black;
+    vertical-align: middle;
+    padding-bottom: 0px;
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+  }
+}
+
 .q-indicator p {
   padding: 0px;
   margin: 0px;
@@ -64,6 +75,15 @@ export default {
 }
 
 img {
-  width: 80px;
+  width: 40px;
+  position: relative;
+  top: 3px;
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  img {
+    width: 80px;
+  }
 }
 </style>

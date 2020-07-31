@@ -7,7 +7,6 @@
     </div>
     <HomeMenu />
     <HamburgerSpotlight />
-    <TheFooter />
   </div>
 </template>
 
@@ -16,7 +15,7 @@ import HamburgerSpotlight from "./HamburgerSpotlight";
 import ButtonNavigation from "./ButtonNavigation";
 import CaretBottom from "./CaretBottom";
 import HomeMenu from "./HomeMenu";
-import TheFooter from "./TheFooter";
+
 export default {
   name: "Home",
   components: {
@@ -24,7 +23,6 @@ export default {
     HomeMenu,
     CaretBottom,
     HamburgerSpotlight,
-    TheFooter,
   },
 };
 </script>
