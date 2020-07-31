@@ -1,7 +1,12 @@
 <template>
   <div id="the-header">
     <div class="content">
-      <img class="logo-symbol" alt="" src="../assets/logo-symbol.svg" />
+      <img
+        class="logo-symbol"
+        @click="goHome"
+        alt=""
+        src="../assets/logo-symbol.svg"
+      />
       <CartIcon />
     </div>
   </div>
@@ -12,6 +17,11 @@ import CartIcon from "./CartIcon";
 export default {
   name: "TheHeader",
   components: { CartIcon },
+  methods: {
+    goHome: function() {
+      this.$router.push("/");
+    },
+  },
 };
 </script>
 
@@ -35,6 +45,7 @@ export default {
 .logo-symbol {
   justify-self: start;
   margin-left: 25px;
+  cursor: pointer;
 }
 
 img {

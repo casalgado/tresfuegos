@@ -24,7 +24,7 @@ export default {
       });
     },
     click: function() {
-      console.log("test");
+      console.log("prevent");
     },
   },
   computed: {

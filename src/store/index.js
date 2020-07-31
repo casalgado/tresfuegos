@@ -1,11 +1,13 @@
 import Vue from "vue";
 import Vuex from "vuex";
+import createPersistedState from "vuex-persistedstate";
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
     cart: [],
+    info: {},
   },
   getters: {
     totalQuantity: (state) => {
@@ -40,7 +42,11 @@ export default new Vuex.Store({
       });
       state.cart = [...state.cart.filter((e) => e.cantidad >= 1)];
     },
+    updateClientInfo(state, payload) {
+      state.info = Object.assign({}, payload);
+    },
   },
   actions: {},
   modules: {},
+  plugins: [createPersistedState()],
 });

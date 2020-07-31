@@ -3,16 +3,19 @@
     <p>Carrito de Compra</p>
     <CartSnippet v-for="c in cart" :key="c.nombre" :item="c" />
     <p class="total">Total: {{ total }}</p>
+    <ButtonNavigation route="Checkout" text="checkout" />
   </div>
 </template>
 
 <script>
+import ButtonNavigation from "./ButtonNavigation";
 import numeral from "numeral";
 import CartSnippet from "./CartSnippet";
 export default {
   name: "CartPopup",
   components: {
     CartSnippet,
+    ButtonNavigation,
   },
   methods: {
     totalPerItem(item) {
@@ -40,6 +43,8 @@ export default {
   background-color: whitesmoke;
   border: 1px solid rgb(30, 30, 30);
   border-radius: 8px;
+  z-index: 999;
+  padding-bottom: 25px;
 }
 
 p:first-child {

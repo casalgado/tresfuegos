@@ -2,15 +2,21 @@
   <div class="cont">
     <TheCheckoutOrderSummary />
     <TheCheckoutClientInfo />
+    <ButtonWhatsapp id="checkoutButton" />
   </div>
 </template>
 
 <script>
+import ButtonWhatsapp from "./ButtonWhatsapp";
 import TheCheckoutClientInfo from "./TheCheckoutClientInfo";
 import TheCheckoutOrderSummary from "./TheCheckoutOrderSummary";
 export default {
   name: "TheCheckout",
-  components: { TheCheckoutClientInfo, TheCheckoutOrderSummary },
+  components: {
+    TheCheckoutClientInfo,
+    TheCheckoutOrderSummary,
+    ButtonWhatsapp,
+  },
   data() {
     return {};
   },
@@ -21,5 +27,10 @@ export default {
 .cont {
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+
+#checkoutButton {
+  grid-column: span 2;
+  margin-top: 25px;
 }
 </style>

@@ -1,16 +1,34 @@
 <template>
-  <button @click="sendMessage">{{ msg }}</button>
+  <div>
+    <button @click="sendMessage">Checkout</button>
+  </div>
 </template>
 
 <script>
 export default {
   name: "ButtonWhatsapp",
-  props: {
-    msg: String,
-  },
+  props: {},
   methods: {
     sendMessage: function() {
-      window.open("https://api.whatsapp.com/send?phone=+573046675581");
+      let i = this.$store.state.info;
+      let firstname = i.firstname || "(por definir)";
+      let lastname = i.lastname || "";
+      let address = i.address || "(por definir)";
+      let payment = i.payment || "(por definir)";
+      let order = `Nombre: ${firstname} ${lastname},%0aDireccion: ${address}.%0aPedido:%0a`;
+      this.$store.state.cart.forEach((c) => {
+        order += `${c.cantidad} ${c.nombre},%0a`;
+      });
+      order += `Total: ${this.$store.getters.totalPrice},%0a`;
+      order += `Medio Pago: ${payment},`;
+      order.replace("#", "no");
+
+      window.open("https://wa.me/+573152574690?text=" + order);
+    },
+  },
+  computed: {
+    getState: function() {
+      return this.$store.state;
     },
   },
 };
